@@ -15,7 +15,7 @@ class Chromosome(object):
 def main():
     '''Main'''
     c = Chromosome()
-    c.genes = "11001180"
+    c.genes = "11001100"
     c.Fitness()
     print(c.fitness)
 
