@@ -61,14 +61,15 @@ class Parser(object):
         self.getclauses()
         self.getclauseamt()
 
-    def test_solution(self, solution):
+    def testsolution(self, solution):
         result = []
         variables = {}
         self.Change()
         i = 0
         for v in self.variables:
             variables[v] = solution[i]
-            i += 1
+            if i+1 > solution.__len__()-1:
+                break
         clauses = self.storage
         for c in clauses:
             clauseval = ''
@@ -87,12 +88,3 @@ class Parser(object):
             else:
                 fixedResult.append(r)
         return fixedResult    
-
-
-def main():
-  p = Parser('(A+B)*(B+!C)')
-  p.getdatafromfile("parserdata.txt")
-  print p.test_solution(p.expression)
-
-
-        

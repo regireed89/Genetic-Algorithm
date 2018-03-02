@@ -4,17 +4,20 @@ from Chromosome import Chromosome
 def Crossover(parent1, parent2):
     kid1 = ""
     kid2 = ""
-    for x in range(0, 4):
+    kids = []
+    for x in range(0, abs(parent1.genes.__len__()/2)):
         kid1 += parent1.genes[x]
         kid2 += parent2.genes[x]
-    for x in range(4, 8):
+    for x in range(abs(parent1.genes.__len__()/2), parent1.genes.__len__()):
         kid1 += parent2.genes[x]
         kid2 += parent1.genes[x]
     newkid1 = Chromosome()
     newkid1.genes = kid1
     newkid2 = Chromosome()
     newkid2.genes = kid2
-    return kid1, kid2
+    kids.append(newkid1)
+    kids.append(newkid2)
+    return kids
 
 def Mutation(chrom):
     new = ""
@@ -26,15 +29,4 @@ def Mutation(chrom):
             new += '1'
     chrom.genes = new
     return chrom.genes
-
-
-
-
-def main():
-    '''Main'''
-    p1 = Chromosome()
-    p1.genes = "10101010"
-    print p1.genes
-    print Mutation(p1)
-    
 
