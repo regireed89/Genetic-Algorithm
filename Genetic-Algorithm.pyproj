@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{2421e932-4c00-49bb-8e42-6edf47cd82c5}</ProjectGuid>
     <ProjectHome />
-    <StartupFile>Parser.py</StartupFile>
+    <StartupFile>GeneticAlgorithm.py</StartupFile>
     <SearchPath />
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>

@@ -38,4 +38,3 @@ def main():
     print Mutation(p1)
     
 
-main()

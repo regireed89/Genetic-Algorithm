@@ -91,9 +91,8 @@ class Parser(object):
 
 def main():
   p = Parser('(A+B)*(B+!C)')
-  
-  print p.test_solution("11001001")
+  p.getdatafromfile("parserdata.txt")
+  print p.test_solution(p.expression)
 
 
         
-main()
