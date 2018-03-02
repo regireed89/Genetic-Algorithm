@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{2421e932-4c00-49bb-8e42-6edf47cd82c5}</ProjectGuid>
     <ProjectHome />
-    <StartupFile>Operators.py</StartupFile>
+    <StartupFile>Parser.py</StartupFile>
     <SearchPath />
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
@@ -20,6 +20,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Chromosome.py" />
+    <Compile Include="GeneticAlgorithm.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Operators.py">
       <SubType>Code</SubType>
     </Compile>

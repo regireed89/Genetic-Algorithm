@@ -44,7 +44,7 @@ class Parser(object):
                 addstring = ""
         return self.storage
 
-    def flipdanigga(self):
+    def Change(self):
         new = ""
         for x in self.storage:
             for c in x:
@@ -56,15 +56,15 @@ class Parser(object):
                     new  += '~'
                 else:
                     new += c
-         self.expression = new 
-         self.getvariables()
-         self.getclauses()
-         self.getclauseamt()
+        self.expression = new 
+        self.getvariables()
+        self.getclauses()
+        self.getclauseamt()
 
     def test_solution(self, solution):
         result = []
         variables = {}
-        self.flipdanigga()
+        self.Change()
         i = 0
         for v in self.variables:
             variables[v] = solution[i]
@@ -72,7 +72,7 @@ class Parser(object):
         clauses = self.storage
         for c in clauses:
             clauseval = ''
-            for place in range(1, str(c).__len__()-1):
+            for place in range(1, str(c).__len__() - 1):
                 if c[place] in self.variables:
                     clauseval += variables[c[place]]
                 else:
@@ -90,9 +90,9 @@ class Parser(object):
 
 
 def main():
-    parser = Parser('(A + B) * (B + C)')
-    print parser.clauses
-    print parser.characters
+  p = Parser('(A+B)*(B+!C)')
+  
+  print p.test_solution("11001001")
 
 
         
