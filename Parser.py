@@ -87,3 +87,7 @@ class Parser(object):
             else:
                 fixedResult.append(r)
         return fixedResult    
+
+if __name__ == '__main__':
+    import Main as Main
+    Main.main()

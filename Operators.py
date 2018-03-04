@@ -40,3 +40,6 @@ def Mutation(chrom):
         new.genes += ch
     return new
 
+if __name__ == '__main__':
+    import Main as Main
+    Main.main()

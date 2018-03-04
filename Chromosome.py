@@ -22,3 +22,7 @@ class Chromosome(object):
         if float(total) < 0.001:
             return
         self.fitness_ratio = float(self.fitness)/float(total)
+
+if __name__ == '__main__':
+    import Main as Main
+    Main.main()

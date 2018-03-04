@@ -26,15 +26,21 @@ def geneticAlgorithm(data):
         
         population = sorted(population, key= lambda x: x.fitness_ratio, reverse= True)
         if int(population[0].fitness) is 1:
-            print population[0].genes
+            i+=1
+            print "Generation: " + str(i)
+            print "Result: " + population[0].genes
             return
         p1 = population[0]
         p2 = population[1]
         i+=1
-        print str(i)+ " : " + population[0].genes + " : " + str(population[0].fitness)
+        #print str(i)+ " : " + population[0].genes + " : " + str(population[0].fitness)
         i+=1
-        print str(i)+ " : " + population[1].genes + " : " + str(population[1].fitness)
+        #print str(i)+ " : " + population[1].genes + " : " + str(population[1].fitness)
         population = []
         for n in range(0,10):
             population.append(Mutation(Crossover(p1,p2)[0]))
             population.append(Mutation(Crossover(p1,p2)[1]))
+
+if __name__ == '__main__':
+    import Main as Main
+    Main.main()
