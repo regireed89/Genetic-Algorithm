@@ -61,19 +61,18 @@ class Parser(object):
         self.getclauses()
         self.getclauseamt()
 
-    def testsolution(self, solution):
+    def test_solution(self, solution):
         result = []
         variables = {}
         self.Change()
         i = 0
         for v in self.variables:
-            variables[v] = solution[i]
-            if i+1 > solution.__len__()-1:
-                break
+            variables[v] = solution.genes[i]
+            i += 1
         clauses = self.storage
         for c in clauses:
             clauseval = ''
-            for place in range(1, str(c).__len__() - 1):
+            for place in range(1, str(c).__len__()-1):
                 if c[place] in self.variables:
                     clauseval += variables[c[place]]
                 else:
